@@ -59,7 +59,7 @@ Build the docker client images
 docker build . -f Dockerfile.client --rm=true -t mailer/client:1.0 ; docker rmi $(docker images -f "dangling=true" -q)
 ```
 The commands above generate the following images. A couple of beautiful 10Mb images for the server and the client
-![Micro containers](http://imgur.com/a/jVoR0)
+![Micro containers](http://i.imgur.com/nUmqH1A.png)
 
 Before we can see them in action within their docker containers we must make sure that they have clear connectivity. We generate
 a Docker network by the name of mailernet
