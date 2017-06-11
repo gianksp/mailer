@@ -41,7 +41,7 @@ import (
 
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-	pb "github.com/github.com/gianksp/mailer/proto"
+	pb "github.com/gianksp/mailer/proto"
 	"google.golang.org/grpc/reflection"
 
 	"github.com/sendgrid/sendgrid-go"
