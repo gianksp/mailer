@@ -1,0 +1,23 @@
+syntax = "proto3";
+package glofox_mailer;
+
+service MailingService {
+    rpc Send (Envelope) returns (Envelope) {}
+}
+
+message Email {
+    string name = 1;
+    string address = 2;
+}
+
+message Content {
+    string type = 1;
+    string value = 2;
+}
+
+message Envelope {
+    string subject = 1;
+    Email from = 2;
+    repeated Email to = 3;
+    Content content = 4;
+}

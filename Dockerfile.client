@@ -1,0 +1,14 @@
+FROM golang:1.8.3 as builder
+RUN mkdir -p /go/src/github.com/gianksp/mailer
+WORKDIR /go/src/github.com/gianksp/mailer
+COPY . .
+
+RUN cd client \
+    && go get ./...
+
+RUN cd client \
+    && CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+
+FROM scratch AS mailer-client
+COPY --from=0 /go/src/github.com/gianksp/mailer/client/main .
+CMD ["/main"]
