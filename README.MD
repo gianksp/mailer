@@ -84,3 +84,5 @@ Generate the proto go class for grpc if not available
 ```
 protoc -I mail/ mail/proto/mail.proto --go_out=plugins=grpc:mail
 ```
+
+
