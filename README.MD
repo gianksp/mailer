@@ -1,4 +1,4 @@
-# Mailer Microservice
+# Mailer GRPC Microservice
 
 GRPC Micro Container Mail Service developed in GO. This is a small tutorial on how to create Micro containers (< 12 mb) running a GRPC powered server-client in Go language.
 
